@@ -1,10 +1,116 @@
 // Header, footer, navigation, section 
-.hero {
-  height: 400px;
-  background-color: pink;
+.headerSection {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  height: 64px;
+  border-bottom: 1px solid #eae9f4;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+  &__logoArea {
+    position: relative;
+  }
 }
-.container {
-  background-color: white;
+.heroSection {
+  color: #ffffff;
+  background: url(../img/lady.png) center no-repeat;
+  background-color: #2e328d;
+  background-size: 80%;
+  background-position: 120% 100%;
+  padding-top: 64px;
+  & .container-fluid {
+    padding: 0;
+  }
+  &__textContainer {
+    padding-top: 40px;
+  }
+  &__header {
+    font-weight: 300;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  &__text {
+    font-weight: 300;
+    margin: 0;
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: .5px;
+    &--sup {
+      font-size: 10px;
+    }
+  }
+  &__bgImage {
+    min-height: 400px;
+  }
+}
+.linksSection {
+  padding-top: 50px;
+  padding-bottom: 60px;
+  &__column {
+    margin-bottom: 40px;
+  }
+  &__header {
+    color: #223C84;
+    font-size: 25px;
+    line-height: 34px;
+    font-weight: 300;
+    margin-bottom: 60px;
+    &--one {
+      color: #223C84;
+      margin-bottom: 20px;
+    }
+    &--two {
+      color: #632b71;
+      margin-bottom: 20px;
+    }
+    &--three {
+      color: #8b2e64;
+      margin-bottom: 20px;
+    }
+    &--four {
+      color: #223C84;
+      margin-bottom: 20px;
+    }
+  }
+  &__image {
+    margin-bottom: 20px;
+    height: 55px;
+    width: auto;
+  }
+  &__list {
+    color: #686868;
+    font-size: 18px;
+    line-height: 28px;
+    padding-left: 30px;
+    font-weight: 300;
+    &Bullet {
+      margin-bottom: 12px;
+    }
+  }
+  &__link {
+    color: #2d72c8;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: block;
+    text-decoration: none;
+    transition: .25s;
+    &:hover {
+      color: #c0d4ee;
+      transition: .25s;
+      text-decoration: none;
+    }
+  }
+}
+.disclaimerSection {
+  padding-bottom: 100px;
+  &__text {
+    font-size: 16px;
+    line-height: 22px;
+    color: #898989;
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
 }
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
@@ -13,12 +119,48 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-
+  .heroSection {
+    background: url(../img/lady.png) center no-repeat;
+    background-size: 50%;
+    background-position: 110% 0%;
+    background-color: #2e328d;
+    &__textContainer {
+      padding-top: 135px;
+      padding-bottom: 160px;
+    }
+    &__header {
+      margin-bottom: 40px;
+    }
+    &__text {
+      font-size: 18px;
+    }
+    &__bgImage {
+      background-image: none;
+    }
+  }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-
+  .headerSection {
+    height: 104px;
+  }
+  .heroSection {
+    background-image: none;
+    padding-top: 104px;
+    &__bgImage {
+      background: url(../img/lady.png) center no-repeat;
+      background-size: contain;
+    }
+    &__textContainer {
+      padding-top: 100px;
+      padding-bottom: 125px;
+    }
+    &__header {
+      font-size: 40px;
+      margin: 0 0 60px;
+    }
+  }
 }
 
 // Extra large devices (large desktops, 1200px and up)
